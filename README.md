@@ -1,6 +1,6 @@
 # UmbHost.GreenStack.Umbraco.StarterKit
 
-A dotnet new template for Umbraco 17 with Umbraco Starter Kit preconfigured for [GreenStack](https://umbhost.net/sustainable-cloud-hosting/modern-umbraco-hosting) hosting.
+A dotnet new template for Umbraco 17 with The Starter Kit preconfigured for [GreenStack](https://umbhost.net/sustainable-cloud-hosting/modern-umbraco-hosting) hosting.
 
 ## Installation
 
@@ -14,7 +14,7 @@ dotnet new install UmbHost.GreenStack.Umbraco.StarterKit
 dotnet new greenstack-umbraco-starterkit -n MyProject
 ```
 
-This creates a new Umbraco 17 project with Umbraco Starter Kit and:
+This creates a new Umbraco 17 project with [The Starter Kit](https://marketplace.umbraco.com/package/umbraco.thestarterkit) and:
 
 - Forwarded headers middleware for Traefik proxy
 - HTTPS runtime validator removed (SSL terminated by GreenStack)
