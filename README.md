@@ -1,17 +1,17 @@
-# UmbHost.GreenStack.Umbraco.StarterKit
+# UmbHost.GreenStack.Umbraco.TheStarterKit
 
 A dotnet new template for Umbraco 17 with The Starter Kit preconfigured for [GreenStack](https://umbhost.net/sustainable-cloud-hosting/modern-umbraco-hosting) hosting.
 
 ## Installation
 
 ```bash
-dotnet new install UmbHost.GreenStack.Umbraco.StarterKit
+dotnet new install UmbHost.GreenStack.Umbraco.TheStarterKit
 ```
 
 ## Usage
 
 ```bash
-dotnet new greenstack-umbraco-starterkit -n MyProject
+dotnet new greenstack-umbraco-thestarterkit -n MyProject
 ```
 
 This creates a new Umbraco 17 project with [The Starter Kit](https://marketplace.umbraco.com/package/umbraco.thestarterkit) and:
@@ -28,7 +28,7 @@ Follow the [Getting Started with Umbraco 17 on GreenStack](https://umbhost.net/g
 
 ## Source
 
-The template content comes from [GreenStack.Umbraco.StarterKit](https://github.com/UmbHost/GreenStack.Umbraco.StarterKit), which is also available as a GitHub template repository.
+The template content comes from [GreenStack.Umbraco.TheStarterKit](https://github.com/UmbHost/GreenStack.Umbraco.TheStarterKit), which is also available as a GitHub template repository.
 
 ## GreenStack
 

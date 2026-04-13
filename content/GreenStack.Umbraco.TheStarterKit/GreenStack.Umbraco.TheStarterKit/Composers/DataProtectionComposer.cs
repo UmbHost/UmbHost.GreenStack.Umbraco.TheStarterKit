@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 
-namespace GreenStack.Umbraco.StarterKit.Composers;
+namespace GreenStack.Umbraco.TheStarterKit.Composers;
 
 public class DataProtectionComposer : IComposer
 {

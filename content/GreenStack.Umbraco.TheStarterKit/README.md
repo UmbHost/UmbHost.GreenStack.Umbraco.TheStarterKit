@@ -21,8 +21,8 @@ A GitHub template repository for Umbraco 17 with The Starter Kit, preconfigured 
 Alternatively, install via dotnet new:
 
 ```bash
-dotnet new install UmbHost.GreenStack.Umbraco.StarterKit
-dotnet new greenstack-umbraco-starterkit -n MyProject
+dotnet new install UmbHost.GreenStack.Umbraco.TheStarterKit
+dotnet new greenstack-umbraco-thestarterkit -n MyProject
 ```
 
 ## License
