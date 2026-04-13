@@ -3,9 +3,9 @@
   "author": "UmbHost",
   "classifications": ["Web", "Umbraco", "GreenStack"],
   "identity": "UmbHost.GreenStack.Umbraco.StarterKit",
-  "name": "Umbraco with Starter Kit on GreenStack",
+  "name": "Umbraco with The Starter Kit on GreenStack",
   "shortName": "greenstack-umbraco-starterkit",
-  "description": "Umbraco 17 with Umbraco Starter Kit preconfigured for GreenStack hosting with Docker support",
+  "description": "Umbraco 17 with The Starter Kit preconfigured for GreenStack hosting with Docker support",
   "tags": {
     "language": "C#",
     "type": "project"
