@@ -2,15 +2,15 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "UmbHost",
   "classifications": ["Web", "Umbraco", "GreenStack"],
-  "identity": "UmbHost.GreenStack.Umbraco.StarterKit",
+  "identity": "UmbHost.GreenStack.Umbraco.TheStarterKit",
   "name": "Umbraco with The Starter Kit on GreenStack",
-  "shortName": "greenstack-umbraco-starterkit",
+  "shortName": "greenstack-umbraco-thestarterkit",
   "description": "Umbraco 17 with The Starter Kit preconfigured for GreenStack hosting with Docker support",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "GreenStack.Umbraco.StarterKit",
+  "sourceName": "GreenStack.Umbraco.TheStarterKit",
   "preferNameDirectory": true,
   "sources": [
     {

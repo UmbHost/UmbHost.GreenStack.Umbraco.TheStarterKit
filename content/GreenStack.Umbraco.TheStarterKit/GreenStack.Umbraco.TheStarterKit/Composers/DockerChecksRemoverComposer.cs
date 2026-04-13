@@ -2,7 +2,7 @@ using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Infrastructure.Runtime.RuntimeModeValidators;
 
-namespace GreenStack.Umbraco.StarterKit.Composers;
+namespace GreenStack.Umbraco.TheStarterKit.Composers;
 
 public class DockerChecksRemoverComposer : IComposer
 {
