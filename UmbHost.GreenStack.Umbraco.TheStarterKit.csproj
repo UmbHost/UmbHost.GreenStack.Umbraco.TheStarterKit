@@ -20,6 +20,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.svg</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,7 @@
     <EmbeddedResource Remove="pack/**;content/**" />
     <None Remove="pack/**;content/**" />
     <None Include="README.md" Pack="true" PackagePath="/" />
+    <None Include="icon.svg" Pack="true" PackagePath="/" />
   </ItemGroup>
 
 </Project>
