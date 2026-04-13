@@ -1,0 +1,35 @@
+name: Update Submodule
+
+on:
+  repository_dispatch:
+    types: [update-submodule]
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+
+      - name: Update submodule
+        run: |
+          git submodule update --remote content/GreenStack.Umbraco.TheStarterKit
+          echo "CHANGED=$(git diff --quiet && echo false || echo true)" >> $GITHUB_ENV
+
+      - name: Create Pull Request
+        if: env.CHANGED == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: update GreenStack.Umbraco.TheStarterKit submodule"
+          title: "Update GreenStack.Umbraco.TheStarterKit submodule"
+          body: "Automated submodule update from [GreenStack.Umbraco.TheStarterKit](https://github.com/UmbHost/GreenStack.Umbraco.TheStarterKit)."
+          branch: update-submodule
+          delete-branch: true
