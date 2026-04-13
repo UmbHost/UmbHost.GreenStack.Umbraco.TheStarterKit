@@ -1,0 +1,12 @@
+{
+    "Category": "Themes & Starter Kits",
+    "PackageType": "Package",
+    "LicenseTypes": ["Free"],
+    "AuthorDetails": {
+        "Name": "UmbHost",
+        "Url": "https://umbhost.net",
+        "SyncContributorsFromRepository": true
+    },
+    "DocumentationUrl": "https://umbhost.net/gb/blog/2026/01/getting-started-with-umbraco-17-on-greenstack-with-github",
+    "IssueTrackerUrl": "https://github.com/UmbHost/UmbHost.GreenStack.Umbraco.StarterKit/issues"
+}

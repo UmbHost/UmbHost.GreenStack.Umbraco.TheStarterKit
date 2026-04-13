@@ -1,0 +1,5 @@
+pack/
+*.nupkg
+*.snupkg
+[Bb]in/
+[Oo]bj/
