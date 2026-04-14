@@ -4,7 +4,7 @@
     <PackageId>UmbHost.GreenStack.Umbraco.TheStarterKit</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageType>Template</PackageType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
@@ -13,7 +13,7 @@
 
     <Authors>UmbHost</Authors>
     <Title>Umbraco with The Starter Kit on GreenStack</Title>
-    <Description>A dotnet new template for Umbraco 17 with The Starter Kit preconfigured for GreenStack hosting with Docker support</Description>
+    <Description>A dotnet new template for Umbraco 13 LTS with The Starter Kit preconfigured for GreenStack hosting with Docker support</Description>
     <PackageTags>dotnet-new;templates;umbraco;greenstack;umbhost;umbraco-marketplace</PackageTags>
     <PackageProjectUrl>https://github.com/UmbHost/UmbHost.GreenStack.Umbraco.TheStarterKit</PackageProjectUrl>
     <RepositoryUrl>https://github.com/UmbHost/UmbHost.GreenStack.Umbraco.TheStarterKit</RepositoryUrl>
@@ -21,7 +21,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
-    <UmbracoCmsVersion Condition="'$(UmbracoCmsVersion)' == ''">17.0.0</UmbracoCmsVersion>
+    <UmbracoCmsVersion Condition="'$(UmbracoCmsVersion)' == ''">13.0.0</UmbracoCmsVersion>
   </PropertyGroup>
 
   <ItemGroup>

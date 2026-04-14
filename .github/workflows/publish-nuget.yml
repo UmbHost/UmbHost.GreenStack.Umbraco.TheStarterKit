@@ -2,7 +2,7 @@ name: Publish NuGet Package
 
 on:
   push:
-    branches: [main]
+    branches: [v13]
   workflow_dispatch:
 
 jobs:
@@ -20,18 +20,27 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: '10.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Extract Umbraco version
         id: version
         run: |
-          VERSION=$(grep -oP 'Include="Umbraco\.Cms" Version="\K[^"]+' content/GreenStack.Umbraco.TheStarterKit/GreenStack.Umbraco.TheStarterKit/GreenStack.Umbraco.TheStarterKit.csproj)
+          VERSION=$(grep -oP 'Include="Umbraco\.Cms" Version="\K[^"]+' content/GreenStack.Umbraco.TheStarterKit/GreenStack.Umbraco/GreenStack.Umbraco.csproj)
+          MAJOR="${VERSION%%.*}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "major=$MAJOR" >> $GITHUB_OUTPUT
           if [[ "$VERSION" == *"-"* ]]; then
             echo "prerelease=true" >> $GITHUB_OUTPUT
           else
             echo "prerelease=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Find previous tag in same major version
+        id: previous
+        run: |
+          git fetch --tags
+          PREV=$(git tag --list "v${{ steps.version.outputs.major }}.*" --sort=-v:refname | grep -v "^v${{ steps.version.outputs.version }}$" | head -n 1)
+          echo "tag=$PREV" >> $GITHUB_OUTPUT
 
       - name: Check if version already published
         id: check
@@ -71,5 +80,6 @@ jobs:
         with:
           tag_name: v${{ steps.version.outputs.version }}
           generate_release_notes: true
+          previous_tag: ${{ steps.previous.outputs.tag }}
           prerelease: ${{ steps.version.outputs.prerelease == 'true' }}
           files: ./nupkg/*.nupkg

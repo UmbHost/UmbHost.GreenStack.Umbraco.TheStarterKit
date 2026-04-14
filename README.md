@@ -1,11 +1,13 @@
-# UmbHost.GreenStack.Umbraco.TheStarterKit
+# UmbHost.GreenStack.Umbraco.TheStarterKit (v13)
 
-A dotnet new template for Umbraco 17 with The Starter Kit preconfigured for [GreenStack](https://umbhost.net/sustainable-cloud-hosting/modern-umbraco-hosting) hosting.
+A dotnet new template for Umbraco 13 LTS with The Starter Kit preconfigured for [GreenStack](https://umbhost.net/sustainable-cloud-hosting/modern-umbraco-hosting) hosting.
+
+> This is the **v13 LTS** branch of the template. It targets Umbraco 13 (LTS) on .NET 8. For the latest Umbraco version, use the default package.
 
 ## Installation
 
 ```bash
-dotnet new install UmbHost.GreenStack.Umbraco.TheStarterKit
+dotnet new install UmbHost.GreenStack.Umbraco.TheStarterKit::13.*
 ```
 
 ## Usage
@@ -14,7 +16,7 @@ dotnet new install UmbHost.GreenStack.Umbraco.TheStarterKit
 dotnet new greenstack-umbraco-thestarterkit -n MyProject
 ```
 
-This creates a new Umbraco 17 project with [The Starter Kit](https://marketplace.umbraco.com/package/umbraco.thestarterkit) and:
+This creates a new Umbraco 13 LTS project with [The Starter Kit](https://marketplace.umbraco.com/package/umbraco.thestarterkit) and:
 
 - Forwarded headers middleware for Traefik proxy
 - HTTPS runtime validator removed (SSL terminated by GreenStack)
@@ -24,11 +26,11 @@ This creates a new Umbraco 17 project with [The Starter Kit](https://marketplace
 
 ## Getting started
 
-Follow the [Getting Started with Umbraco 17 on GreenStack](https://umbhost.net/gb/blog/2026/01/getting-started-with-umbraco-17-on-greenstack-with-github) guide.
+Follow the [Getting Started with Umbraco on GreenStack](https://umbhost.net/gb/blog/2026/01/getting-started-with-umbraco-17-on-greenstack-with-github) guide (steps apply equally to Umbraco 13 LTS).
 
 ## Source
 
-The template content comes from [GreenStack.Umbraco.TheStarterKit](https://github.com/UmbHost/GreenStack.Umbraco.TheStarterKit), which is also available as a GitHub template repository.
+The template content comes from [GreenStack.Umbraco.TheStarterKit-v13](https://github.com/UmbHost/GreenStack.Umbraco.TheStarterKit-v13), which is also available as a GitHub template repository.
 
 ## GreenStack
 
