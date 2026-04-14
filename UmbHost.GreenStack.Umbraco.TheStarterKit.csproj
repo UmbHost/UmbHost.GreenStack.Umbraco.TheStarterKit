@@ -21,6 +21,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
+    <UmbracoCmsVersion Condition="'$(UmbracoCmsVersion)' == ''">17.0.0</UmbracoCmsVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +31,10 @@
     <None Remove="pack/**;content/**" />
     <None Include="README.md" Pack="true" PackagePath="/" />
     <None Include="icon.png" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="$(UmbracoCmsVersion)" />
   </ItemGroup>
 
 </Project>

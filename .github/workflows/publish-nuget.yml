@@ -49,7 +49,7 @@ jobs:
 
       - name: Pack
         if: steps.check.outputs.exists == 'false'
-        run: dotnet pack -p:PackageVersion=${{ steps.version.outputs.version }} -o ./nupkg
+        run: dotnet pack -p:PackageVersion=${{ steps.version.outputs.version }} -p:UmbracoCmsVersion=${{ steps.version.outputs.version }} -o ./nupkg
 
       - name: Push to GitHub Packages
         if: steps.check.outputs.exists == 'false'
