@@ -38,7 +38,7 @@ jobs:
       - name: Find previous tag in same major version
         id: previous
         run: |
-          git fetch --tags
+          git -c fetch.recurseSubmodules=no fetch --tags --no-recurse-submodules
           PREV=$(git tag --list "v${{ steps.version.outputs.major }}.*" --sort=-v:refname | grep -v "^v${{ steps.version.outputs.version }}$" | head -n 1)
           echo "tag=$PREV" >> $GITHUB_OUTPUT
 
