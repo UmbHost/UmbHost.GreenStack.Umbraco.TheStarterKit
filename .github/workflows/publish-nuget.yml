@@ -11,6 +11,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v6
@@ -62,11 +63,20 @@ jobs:
 
       - name: Push to GitHub Packages
         if: steps.check.outputs.exists == 'false'
-        run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/UmbHost/index.json"
+        run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/UmbHost/index.json" --skip-duplicate
+
+      - name: Get a short-lived nuget.org API key
+        if: steps.check.outputs.exists == 'false'
+        id: nuget-login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ secrets.NUGET_USER }}
 
       - name: Push to NuGet.org
         if: steps.check.outputs.exists == 'false'
-        run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source "https://api.nuget.org/v3/index.json"
+        env:
+          NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
+        run: dotnet nuget push ./nupkg/*.nupkg --api-key "$NUGET_API_KEY" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
 
       - name: Create tag
         if: steps.check.outputs.exists == 'false'
